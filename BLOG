@@ -1,0 +1,58 @@
+# AWS-Static-Website-Deployment-with-S3-CloudFront
+This project demonstrates how to deploy a static website on AWS using Amazon S3 and distribute it globally using CloudFront. It also follows best practices by using IAM users instead of the root account for secure access management.
+
+ # Objective
+* Host a static website on AWS
+* Improve performance using a CDN
+* Apply basic security practices using IAM
+
+# Services Used
+
+* AWS IAM (Identity and Access Management)
+* Amazon S3 (Static Website Hosting)
+* Amazon CloudFront (Content Delivery Network)
+
+  # HOW I ACHIEVED THIS
+
+  I,
+* Created a new IAM user instead of using the root account
+* Assigned the user to an Admin/Management group
+* Attached necessary permissions (e.g., AdministratorAccess)
+
+  -
+* Created a new S3 bucket for hosting the website
+* Enabled static website hosting
+* Uploaded website files (HTML, CSS, JS)
+
+-
+* Disabled “Block all public access”
+* Added bucket policy to allow public read access
+
+-
+* Accessed the website using the S3 website endpoint
+* Verified that the website loads correctly
+# Here, the browser is usually slow because of the lack of global coverage.
+
+-
+* Created a CloudFront distribution
+* Set S3 bucket as the origin
+* Configured default settings for caching and delivery
+
+- FINALLY
+
+* Linked CloudFront distribution to the S3 bucket
+* Waited for deployment to complete
+* Accessed the website using the CloudFront domain
+
+  🚀 Result
+
+* Successfully deployed a static website on AWS
+* Improved global performance using CDN
+* Followed secure access practices using IAM
+
+  What I Learned
+
+* How to manage access using IAM users and groups
+* How to host static websites using S3
+* How to use CloudFront to distribute content globally
+* Basic understanding of CDN and caching
